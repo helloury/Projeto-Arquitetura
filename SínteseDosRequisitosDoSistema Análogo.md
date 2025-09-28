@@ -1,39 +1,49 @@
+# Síntese dos Requisitos do Sistema Análogo — PsicoManager
 
-# Síntese dos Requisitos do Sistema Análogo
+# Requisitos Funcionais Identificados
 
-A partir da análise do sistema PsicoManager, foi possível identificar os seguintes requisitos observados, que podem servir como referência para o desenvolvimento do sistema PsicoManager:
+1. Notificações e Confirmações
+   - Envio de notificações de presença com pelo menos 24 horas de antecedência.
+   - Permitir que o paciente confirme a presença até 3 horas antes da consulta.
+   - Integração com aplicativos de mensagem (ex.: WhatsApp) para envio de lembretes e confirmações.
 
-1.   Gestão de Agendamentos
-   - Permite agendar consultas e visualizar compromissos diários.
-   - Integração com a agenda do profissional.
-     -Necessidade de confirmação de presença pelo paciente.
+2. Agendamento
+   - Permitir que o paciente marque ou cancele consultas diretamente pelo sistema.
+   - Integração da agenda do psicólogo com horários disponíveis, evitando conflitos.
+   - Registro da sala do atendimento no momento do agendamento.
 
-2.   Cadastro de Pacientes
-   - Registro de dados pessoais: nome, idade, data de nascimento, endereço.
-   - Armazenamento de informações adicionais, como dados de responsáveis em casos de menores.
+3. Prontuário Eletrônico
+   - Armazenamento digital e organizado de prontuários em serviços de nuvem (ex.: Google Drive).
+   - Histórico de atendimentos acessível ao psicólogo.
 
-3. Registro de Prontuários
-   - Armazenamento organizado dos registros clínicos de cada paciente.
-   - Consulta rápida de histórico de atendimentos.
+4. Relatórios
+   - Geração de relatórios mensais consolidados para fins contábeis.
+   - Geração de relatórios individuais por paciente para acompanhamento clínico.
+   - Disponibilização de planilhas individuais para organização dos atendimentos.
 
-4. Notificações e Lembretes
-   - Envio automático de lembretes para consultas agendadas.
-   - Sistema de alertas para o profissional.
+5. Gestão Financeira
+   - Recurso de pagamento online vinculado às consultas agendadas.
+   - Emissão de comprovantes ou notas fiscais.
 
-5. Interface Intuitiva
-   - Interface clara e fácil de usar após atualizações.
-   - Acesso rápido à agenda diária.
 
-6. Relatórios
-   - Relatórios de atendimentos.
-   - Relatórios financeiros.
 
-7. Segurança
-   - Proteção de dados sensíveis.
-   - Controle de acesso a informações clínicas.
+## Requisitos Não-Funcionais Identificados
 
-8. Pontos a Melhorar Identificados
-   - Inclusão de recurso para registrar a sala utilizada no agendamento.
-   - Integração com aplicativos de mensagem para envio de notificações automáticas.
-   - Inclusão de pagamento online integrado.
-   - Maior simplicidade no cadastro inicial do paciente.
+1. Segurança
+   - Proteção de dados sensíveis, principalmente relacionados a prontuários e pagamentos.
+   - Controle de acesso e autenticação segura.
+
+2. Usabilidade
+   - Interface intuitiva e acessível para profissionais e pacientes.
+   - Compatibilidade com múltiplos dispositivos (computadores, tablets e celulares).
+
+3. Confiabilidade
+   - Garantia de operação estável e sem falhas críticas.
+   - Backup e recuperação de dados.
+
+
+# Observações
+A análise do PsicoManager mostra que ele atende boa parte desses requisitos, mas existem oportunidades de melhoria, especialmente em:
+- Integração mais ampla com aplicativos de mensagem.
+- Inclusão de recurso de registro automático da sala de atendimento.
+- Interface ainda mais intuitiva e responsiva.
