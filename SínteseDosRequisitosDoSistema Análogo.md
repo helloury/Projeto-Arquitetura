@@ -1,5 +1,5 @@
 
-# Síntese dos Requisitos do Sistema Análogo — PsicoManager
+# Síntese dos Requisitos do Sistema Análogo
 
 A partir da análise do sistema PsicoManager, foi possível identificar os seguintes requisitos observados, que podem servir como referência para o desenvolvimento do sistema PsicoManager:
 
