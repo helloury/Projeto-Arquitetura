@@ -1,3 +1,5 @@
+# Síntese dos Requisitos do questionário
+
 ## Requisitos Funcionais
 
 1. O sistema deve enviar notificações de presença com pelo menos 24 horas de antecedência, permitindo que o paciente confirme até 3 horas antes da consulta.
