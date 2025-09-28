@@ -6,7 +6,7 @@ A partir da análise do sistema PsicoManager, foi possível identificar os segui
 1.   Gestão de Agendamentos
    - Permite agendar consultas e visualizar compromissos diários.
    - Integração com a agenda do profissional.
-   - Necessidade de confirmação de presença pelo paciente.
+     -Necessidade de confirmação de presença pelo paciente.
 
 2.   Cadastro de Pacientes
    - Registro de dados pessoais: nome, idade, data de nascimento, endereço.
