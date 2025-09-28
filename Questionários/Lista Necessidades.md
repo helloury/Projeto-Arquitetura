@@ -1,4 +1,4 @@
-Lista de Necessidades com Explicação/Justificativa
+Lista de Necessidades com Explicação e Justificativa
 
 1. É necessário que o sistema permita ao psicólogo visualizar e gerenciar todos os compromissos, incluindo sessões e outros compromissos pessoais. Isso evita conflitos de horário, organiza a rotina do profissional e aumenta a eficiência no atendimento.
 
