@@ -1,34 +1,44 @@
-# Caso de Uso CDU5: Visualizar Pacientes
+# Caso de Uso CDU5: Cancelar Consulta
 
 ## Escopo
 Sistema de Atendimento Psicológico Automatizado
 
 ## Nível
-Objetivo do Psicólogo
+Objetivo do Paciente
 
 ## Ator Principal
-Psicólogo
+Paciente
 
 ## Interessados e Interesses
-- **Psicólogo**: Deseja consultar pacientes atendidos em determinado período.
+- **Paciente**: Deseja cancelar uma consulta agendada.
+- **Psicólogo**: Deseja ser notificado de cancelamentos com antecedência.
 
 ## Pré-condições
-- O psicólogo deve estar logado no sistema.
+- Paciente acessou “Visualizar Histórico”.
+- O paciente deve estar logado no sistema.
+- Deve haver uma consulta confirmada no histórico.
+- Cancelamento permitido até 24h antes da consulta.
 
 ## Garantia de Sucesso (Pós-condições)
-- A lista de pacientes foi exibida com sucesso.
+- A consulta foi removida da agenda.
+- Notificações foram enviadas ao paciente e ao psicólogo.
+- O sistema registrou o status “Cancelada” e atualizou os relatórios.
 
 ## Cenário de Sucesso Principal
-1. O psicólogo acessa a opção “Pacientes”.
-2. O psicólogo escolhe o período desejado.
-3. O sistema exibe a lista de pacientes atendidos.
+1. Paciente seleciona “Cancelar Consulta”.
+2. O sistema solicita confirmação do cancelamento.
+3. Paciente confirma.
+4. Sistema atualiza status da consulta.
+5. Notificações enviadas para paciente e psicólogo
+6. Contabilidade registra cancelamento.
 
 ## Extensões (Fluxos Alternativos)
-- **3a. Nenhum paciente encontrado**:
-  1. O sistema exibe a mensagem “Sem registros para o período selecionado”.
+- **6a. Falha na comunicação com o servidor de notificações**:
+  1. O sistema registra o log e tenta reenviar a notificação automaticamente.
 
 ## Requisitos Especiais
-- Nenhum requisito especial identificado.
+- Integração com WhatsApp API para envio de notificações.
+- Registro automático de data e hora do cancelamento.
 
 ## Frequência de Ocorrência
 Média.

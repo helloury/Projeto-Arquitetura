@@ -1,40 +1,41 @@
-# Caso de Uso CDU9: Enviar Mensagem de Confirmação de Consulta
+# Caso de Uso CDU9: Emitir Relatório Financeiro
 
 ## Escopo
 Sistema de Atendimento Psicológico Automatizado
 
 ## Nível
-Operacional / Automático
+Objetivo do Contabilidade
 
 ## Ator Principal
-WhatsApp API
+Contabilidade
 
 ## Interessados e Interesses
-- **Paciente**: Deseja receber confirmação imediata após o agendamento ou reagendamento de uma consulta.
-- **Psicólogo**: Deseja garantir que cada consulta seja confirmada automaticamente para o paciente.
+- **Psicólogo**: Deseja consultar um relatório financeiro detalhado com informações sobre consultas, pagamentos e cancelamentos para um período específico.
+- **Contabilidade**: gerar relatórios detalhados de receitas, pagamentos e cancelamentos
+
 
 ## Pré-condições
-- O paciente deve estar cadastrado com um número de WhatsApp válido.
-- Uma consulta deve ter sido agendada ou reagendada.
+- O psicólogo deve estar logado no sistema.
+- Sistema possui registros de pagamentos e consultas.
 
 ## Garantia de Sucesso (Pós-condições)
-- O paciente recebe a mensagem de confirmação da consulta.
-- O sistema registra a confirmação e o status de entrega da mensagem.
+- O relatório financeiro foi gerado com dados de consultas, pagamentos e cancelamentos.
 
 ## Cenário de Sucesso Principal
-1. O sistema envia os dados da consulta para a WhatsApp API.
-2. A WhatsApp API entrega a mensagem de confirmação ao paciente.
-3. O sistema registra a entrega e qualquer resposta do paciente (se houver).
+1. O psicólogo acessa a opção “Relatorio Financeiro”.
+2. Sistema exibe filtros de período e psicólogo.
+3. Contabilidade aplica filtros.
+4. Sistema gera relatório detalhado e permite exportar.
 
 ## Extensões (Fluxos Alternativos)
-- **2a. Falha na entrega**:
-  1. O sistema registra a falha e tenta reenviar a mensagem.
-- **2b. Paciente não responde à confirmação**:
-  1. O sistema pode enviar um lembrete automático 24 horas antes da consulta.
+- **3a. Nenhum dado encontrado**:
+  1. O sistema exibe uma mensagem informativa indicando que não há dados para o período selecionado.
 
 ## Requisitos Especiais
-- As mensagens devem ser padronizadas e personalizadas (incluindo nome do paciente, data e hora da consulta).
-- O status de entrega deve ser registrado em banco de dados para fins de auditoria.
+-Relatórios precisos e auditáveis, integração automática com pagamentos.
+
+## Lista de variantes Tecnológicas e de Dados:
+- Base de dados financeira, exportação PDF/Excel.
 
 ## Frequência de Ocorrência
-Alta.
+Média a alta, conforme a necessidade.

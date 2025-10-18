@@ -1,4 +1,4 @@
-# Caso de Uso CDU7: Emitir Relatório Financeiro
+# Caso de Uso CDU7: Visualizar Pacientes
 
 ## Escopo
 Sistema de Atendimento Psicológico Automatizado
@@ -10,23 +10,22 @@ Objetivo do Psicólogo
 Psicólogo
 
 ## Interessados e Interesses
-- **Psicólogo**: Deseja consultar um relatório financeiro detalhado com informações sobre consultas, pagamentos e cancelamentos para um período específico.
+- **Psicólogo**: Deseja consultar pacientes atendidos em determinado período.
 
 ## Pré-condições
 - O psicólogo deve estar logado no sistema.
 
 ## Garantia de Sucesso (Pós-condições)
-- O relatório financeiro foi gerado com dados de consultas, pagamentos e cancelamentos.
+- A lista de pacientes foi exibida com sucesso.
 
 ## Cenário de Sucesso Principal
-1. O psicólogo acessa a opção “Financeiro”.
-2. O psicólogo escolhe o período de emissão do relatório.
-3. O sistema gera um relatório detalhado de receitas.
-4. O psicólogo visualiza o relatório em tela ou exporta o relatório.
+1. O psicólogo acessa a opção “Pacientes”.
+2. O psicólogo escolhe o período desejado.
+3. O sistema exibe a lista de pacientes atendidos.
 
 ## Extensões (Fluxos Alternativos)
-- **3a. Nenhum dado encontrado**:
-  1. O sistema exibe uma mensagem informativa indicando que não há dados para o período selecionado.
+- **3a. Nenhum paciente encontrado**:
+  1. O sistema exibe a mensagem “Sem registros para o período selecionado”.
 
 ## Requisitos Especiais
 - Nenhum requisito especial identificado.

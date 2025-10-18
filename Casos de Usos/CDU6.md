@@ -1,36 +1,47 @@
-# Caso de Uso CDU6: Gerar Relatório de Pacientes
+# Caso de Uso CDU6: Efetuar Pagamento
 
 ## Escopo
 Sistema de Atendimento Psicológico Automatizado
 
 ## Nível
-Objetivo do Psicólogo
+Objetivo do Paciente
 
 ## Ator Principal
-Psicólogo
+Paciente
 
 ## Interessados e Interesses
-- **Psicólogo**: Deseja gerar e salvar relatórios detalhados sobre os atendimentos realizados para cada paciente.
+- **Paciente**: Deseja pagar sua consulta de forma segura.
+- **Psicólogo**: Deseja garantir o recebimento e registrar o pagamento automaticamente.
 
 ## Pré-condições
-- O psicólogo deve estar logado no sistema.
-- Deve existir registro de atendimento para o paciente.
+- O paciente deve estar logado no sistema.
+- Deve existir uma consulta pendente de pagamento.
 
 ## Garantia de Sucesso (Pós-condições)
-- O relatório foi gerado e salvo no histórico do paciente.
+- O pagamento foi aprovado e registrado.
+- O recibo foi gerado e enviado ao paciente.
+- O sistema atualizou os relatórios financeiros e do paciente.
 
 ## Cenário de Sucesso Principal
-1. O psicólogo acessa a opção “Relatórios”.
-2. O psicólogo escolhe o paciente.
-3. O psicólogo preenche as informações do atendimento.
-4. O sistema salva e associa o relatório ao paciente.
+1. O paciente acessa a opção “Pagamentos Pendentes”.
+2. O paciente escolhe a consulta a ser paga.
+3. O paciente seleciona o método de pagamento (cartão, Pix, boleto).
+4. O sistema processa a transação.
+5. O pagamento é aprovado.
+6. O sistema gera o recibo e envia a confirmação via WhatsApp API.
 
 ## Extensões (Fluxos Alternativos)
-- **4a. Falha ao salvar relatório**:
-  1. O sistema exibe uma mensagem de erro e permite o reenvio das informações.
+- **4a. Pagamento recusado**:
+  1. O sistema exibe um erro e oferece a opção de selecionar outro método de pagamento.
+- **4b. Erro de autenticação do cartão**:
+  1. O sistema solicita nova verificação ou registro de um novo cartão.
 
 ## Requisitos Especiais
-- Nenhum requisito especial identificado.
+- Integração com gateway de pagamento via Webhooks.
+- Geração automática de recibo e envio de notificação via WhatsApp API.
+
+## Lista de variantes Tecnológicas e de Dados:
+- Integração com gateway de pagamento, registro automático contábil
 
 ## Frequência de Ocorrência
-Média.
+Alta.
