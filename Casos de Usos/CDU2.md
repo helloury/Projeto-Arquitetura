@@ -30,12 +30,12 @@ Paciente
 
 ## Cenário de Sucesso Principal
 
-- O paciente acessa a opção “Histórico”.
-- O paciente seleciona a consulta que deseja reagendar.
-- O paciente escolhe uma nova data e horário.
-- O sistema exibe os psicólogos disponíveis para o novo horário.
-- O paciente confirma o reagendamento.
-- O sistema atualiza a agenda e envia notificações automáticas via WhatsApp API.
+ 1. O paciente acessa a opção “Histórico”.
+ 2. O paciente seleciona a consulta que deseja reagendar.
+ 3. O paciente escolhe uma nova data e horário.
+ 4. O sistema exibe os psicólogos disponíveis para o novo horário.
+ 5.O paciente confirma o reagendamento.
+ 6. O sistema atualiza a agenda e envia notificações automáticas via WhatsApp API.
 
 ## Extensões (Fluxos Alternativos)
 
