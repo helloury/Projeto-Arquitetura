@@ -10,8 +10,8 @@ Objetivo do Paciente
 Paciente
 
 ## Interessados e Interesses
-- **Psicólogo**: Deseja ampliar o alcance de seus atendimentos, ter maior controle financeiro e fácil acesso ao formulário de seus pacientes.
-- **Paciente**: Busca um serviço de psicólogo que atenda suas necessidades de forma rápida e eficiente, com comprovante de pagamento, notificações/lembretes de transações e agendamentos, além de acesso ao histórico de consultas.
+- **Paciente**: deseja agendar consultas de forma rápida, segura e prática, receber comprovante de pagamento e notificações automáticas.
+- **Psicólogo**: deseja ampliar o número de atendimentos, ter controle financeiro automatizado e acesso fácil às informações dos pacientes.
 - **Sistema Externo de Notificações (WhatsApp API)**: Responsável por enviar lembretes e confirmações automáticas.
 
 ## Pré-condições
