@@ -1,0 +1,76 @@
+@startuml
+class Clinica {
+  - id: int
+  - nome: string
+  - endereco: string
+  - telefone: string
+  + cadastrarClinica()
+  + atualizarClinica()
+  + removerClinica()
+}
+
+class Psicologo {
+  - id: int
+  - nome: string
+  - crp: string
+  - email: string
+  - senha: string
+  + realizarConsulta()
+  + atualizarProntuario()
+  + enviarNotificacao()
+}
+
+class Cliente {
+  - id: int
+  - nome: string
+  - dataNascimento: Date
+  - telefone: string
+  - email: string
+  + agendarConsulta()
+  + cancelarConsulta()
+}
+
+class Consulta {
+  - id: int
+  - data: Date
+  - horario: string
+  - status: string
+  + marcar()
+  + remarcar()
+  + cancelar()
+}
+
+class Prontuario {
+  - id: int
+  - observacoes: string
+  - dataRegistro: Date
+  + adicionarRegistro()
+  + atualizarRegistro()
+}
+
+class Pagamento {
+  - id: int
+  - valor: float
+  - dataPagamento: Date
+  - metodo: string
+  + registrarPagamento()
+  + gerarRelatorioFinanceiro()
+}
+
+class Notificacao {
+  - id: int
+  - mensagem: string
+  - dataEnvio: Date
+  + enviar()
+}
+
+' --- Relações ---
+Clinica --> Psicologo
+Clinica --> Cliente
+Psicologo --> Consulta
+Cliente --> Consulta
+Consulta --> Prontuario
+Consulta --> Pagamento
+Psicologo --> Notificacao
+Cliente --> Notificacao
+@enduml
