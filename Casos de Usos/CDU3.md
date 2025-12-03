@@ -1,4 +1,4 @@
-# Caso de Uso CDU2: Visualizar Histórico (Revisado)
+# Caso de Uso CDU3: Visualizar Histórico
 
 ## Escopo
 Sistema de Atendimento Psicológico Automatizado
@@ -11,7 +11,7 @@ Paciente
 
 ## Interessados e Interesses
 - **Paciente**: Deseja acompanhar consultas passadas, status de consultas futuras, histórico de pagamentos e ter acesso rápido a opções de reagendamento ou cancelamento.
-- **Psicólogo** (Indireto): Interessa-se pela consistência dos dados do histórico para suas próprias análises clínicas (provavelmente em outro Caso de Uso).
+- **Psicólogo** (Indireto): Interessa-se pela consistência dos dados do histórico para suas próprias análises clínicas.
 
 ## Pré-condições
 - O paciente está autenticado (logado) no sistema.
@@ -23,19 +23,21 @@ Paciente
 
 
 ## Cenário de Sucesso Principal
-1. O paciente acessa a seção “Meu Histórico” no sistema.
+1. O paciente acessa a seção “Histórico” no sistema.
 2. O sistema recupera e exibe uma lista de todas as consultas (passadas e futuras) e transações de pagamento, ordenadas por data (da mais recente para a mais antiga).
 3. O paciente localiza e seleciona uma consulta futura (status “Agendada”).
-4. O sistema verifica as regras de negócio (ex.: antecedência mínima para alteração).
+4. O sistema verifica as regras de negócio(24 horas antes da consulta).
 5. Como a consulta é elegível para alteração, o sistema exibe os detalhes da consulta e as opções: “Reagendar Consulta” e “Cancelar Consulta”.
-6. O paciente seleciona uma das opções (ex.: “Reagendar”).
-7. O sistema inicia o caso de uso correspondente (ver seção “Relacionamentos”).
+6. O paciente seleciona uma das opções.
+7. O sistema confirma a opção escolhida.
+8. O sistema atualiza a alteração.
+
 
 
 ## Extensões (Fluxos Alternativos)
 - **2a. Histórico vazio**:
   1. No passo 2 do fluxo principal, o sistema não encontra registros de consultas ou pagamentos para o paciente.
-  2. O sistema exibe uma mensagem informativa (ex.: “Você ainda não possui histórico de consultas ou pagamentos.”).
+  2. O sistema exibe uma mensagem informativa.
   3. O caso de uso termina.
 
 - **3a. Paciente seleciona consulta passada**:
@@ -44,7 +46,7 @@ Paciente
   3. O sistema não apresenta as opções “Reagendar” ou “Cancelar”, pois não se aplicam a consultas passadas.
 
 - **3b. Paciente seleciona um registro de pagamento**:
-  1. No passo 3 do fluxo principal, o paciente seleciona um item que é um registro de pagamento (e não uma consulta).
+  1. No passo 3 do fluxo principal, o paciente seleciona um item que é um registro de pagamento.
   2. O sistema exibe os detalhes da transação (data, valor, status, método de pagamento, consulta associada se houver).
   3. O sistema não apresenta as opções “Reagendar” ou “Cancelar”.
 
